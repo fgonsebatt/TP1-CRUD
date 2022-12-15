@@ -7,7 +7,8 @@ if (document.getElementById("app")) {
                 usuarios: [],
                 errored: false,
                 loading: true,
-                url: "https://felipegonsebatt.pythonanywhere.com/usuarios"
+                url: "https://felipegonsebatt.pythonanywhere.com/usuarios",
+                logueado: sessionStorage.getItem('logueado')
                 }
         },
         methods: {
@@ -38,13 +39,9 @@ if (document.getElementById("app")) {
                     .then(res => res.json())
                     .then(data => {
                         if (data.user == this.Usuario.user && data.passw == this.Usuario.password) {
-                            if (data.activo != 0) {
-                                this.logueado = data.user
-                                sessionStorage.setItem('logueado', data.user)
-                                this.limpiarCampos()
-                            } else {
-                                alert("whaat.")
-                            }
+                            this.logueado = data.user
+                            sessionStorage.setItem('logueado', data.user)
+                            this.limpiarCampos()                      
                         } else {
                             alert("Usuario o contraseña incorrecto.")
                         }
