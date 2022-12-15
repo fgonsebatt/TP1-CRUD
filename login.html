@@ -38,7 +38,7 @@
                         <div v-if="logueado == null">
                             <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
                         </div>
-                        
+                        <a v-if="logueado != null" href="users.html"></a>
 
                     </form>
                 </div>
