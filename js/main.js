@@ -34,7 +34,7 @@ if (document.getElementById("app")) {
                     })
             },
             inicioSesion() {
-                fetch(this.url + '/usuarios/' + this.Usuario.user)
+                fetch(this.url + '/' + this.Usuario.user)
                     .then(res => res.json())
                     .then(data => {
                         if (data.user == this.Usuario.user && data.passw == this.Usuario.password) {
