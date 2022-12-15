@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Jardineria</title>
+    <title>Login - Jardineria</title>
     <link rel="shortcut icon" href="./imagenes/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 
@@ -25,18 +25,20 @@
                     <h3>LOGIN</h3>
                 </div>
                 <div class="col-6" id="logn">
-                    <form action="users.html" target="_blank" id="formlogin">
+                    <form action="users.html" onsubmit="return false">
 
-                        <input placeholder="USER" required class="relleno" type="text" name="user" id="user">
-                        <span class="error relleno" id="errornom"></span>
+                        <input placeholder="USER" required class="relleno2" v-model="Usuario.user" type="text" name="user" id="user">
+              
                         <br><br>
-                        <input placeholder="PASSWORD" required class="relleno" type="password" name="password" id="password">
-                        <span class="error relleno" id="errorapell"></span>
+                        <input placeholder="PASSWORD" required class="relleno2" v-model="Usuario.password" type="password" name="password" id="password">
+     
                         <br><br>
 
                         <br><br>
-                        <input class="boton2" type="submit" value="Enviar">
-                        <input class="boton2" type="reset" value="Borrar">
+                        <div v-if="logueado == null">
+                            <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
+                        </div>
+                        
 
                     </form>
                 </div>

@@ -843,6 +843,21 @@ input.invalido {
     outline: none;
     transition: border-color .2s;
 }
+.relleno2 { 
+    /* background-color: rgba(255, 255, 255, 0.205);
+    border: rgb(39, 153, 10);
+    border-radius: 2px;
+    padding: 5px; */
+    width: 100%; 
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.649);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s;
+}
 
 .relleno, input.valido::placeholder {
     color: rgba(255, 255, 255, 0.605);

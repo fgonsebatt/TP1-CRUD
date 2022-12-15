@@ -32,6 +32,32 @@ if (document.getElementById("app")) {
                     .then(res => {
                         location.reload();
                     })
+            },
+            inicioSesion() {
+                fetch(this.url + '/usuarios/' + this.Usuario.user)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.user == this.Usuario.user && data.passw == this.Usuario.password) {
+                            if (data.activo != 0) {
+                                this.logueado = data.user
+                                sessionStorage.setItem('logueado', data.user)
+                                this.limpiarCampos()
+                            } else {
+                                alert("whaat.")
+                            }
+                        } else {
+                            alert("Usuario o contraseña incorrecto.")
+                        }
+                    })
+            },
+            cerrarSesion() {
+                sessionStorage.removeItem('logueado')
+                this.logueado = sessionStorage.getItem('logueado')
+                this.limpiarCampos()
+            },
+            limpiarCampos() {
+                this.Usuario.user = ""
+                this.Usuario.password = ""
             }
         },
         created() {
