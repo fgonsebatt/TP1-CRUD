@@ -38,7 +38,7 @@ if (document.getElementById("app")) {
                 fetch(this.url + '/' + this.Usuario.user)
                     .then(res => res.json())
                     .then(data => {
-                        if (data.user == this.Usuario.user && data.passw == this.Usuario.password) {
+                        if (data.user == this.Usuario.user && data.passw == this.Usuario.passw) {
                             this.logueado = data.user
                             sessionStorage.setItem('logueado', data.user)
                             this.limpiarCampos()                      
