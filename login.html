@@ -16,7 +16,7 @@
     <header id="header"></header>
     <main>
         <br>
-        <div class="paginas">
+        <div class="paginas" id="app">
 
             <br>
             <div id="barrapad" class="col-1"></div>
@@ -38,7 +38,11 @@
                         <div v-if="logueado == null">
                             <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
                         </div>
-                        <a v-if="logueado != null" href="users.html"></a>
+                        <div v-else>
+                            <input type="submit" value="Iniciar" class="boton2 submit">
+                        </div>
+                        
+                        <!-- <a v-if="logueado != null" href="users.html"></a> -->
 
                     </form>
                 </div>
@@ -60,7 +64,7 @@
     <div class="footer col-12 col-s-12" id="footer"></div>
 
     <script src="./javascript/main.js"></script>
-
+    <script src="./javascript/form.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script src="./js/main.js"></script>
