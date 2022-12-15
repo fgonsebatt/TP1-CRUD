@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Jardineria</title>
+    <link rel="shortcut icon" href="./imagenes/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <br>
+        <div class="paginas">
+            
+            <br>
+            <div id="barrapad" class="col-1"></div>
+            <div class="forms col-8 col-s-12">
+                <div class="col-6">
+                    <h3>CONTACTO</h3>
+                </div>
+                <div class="col-6">
+                <form action="show-data.html" target="_blank" id="formulario">
+                    
+                    <input placeholder="NOMBRE" required class="relleno" type="text" name="nombre" id="nombre">
+                    <span class="error relleno" id="errornom"></span>
+                    <br><br>
+                    <input placeholder="APELLIDO" required class="relleno" type="text" name="apellido" id="apellido">
+                    <span class="error relleno" id="errorapell"></span>
+                    <br><br>
+                    <input placeholder="EMAIL" required class="relleno" type="mail" name="mail" id="mail">
+                    <span class="error relleno" id="errormail"></span>
+                    <br><br>
+                    <label for="tiposjardinero">Que tipo de jardinero sos?</label>
+                    <br>
+                    <input type="radio" name="opcion" value="1"> Profesional
+                    <input type="radio" name="opcion" value="1"> Mi jardin!
+                    <input type="radio" name="opcion" value="1"> Solo curiosidad
+                    <br><br>
+                    
+                    <label for="preferencias">Que informacion te interesa?</label>
+                    <br>
+                    <input type="checkbox" name="preferencias" id="1" >Tratamiento de tierra
+                    <input type="checkbox" name="preferencias" id="2" >Mas plantas!
+                    <input type="checkbox" name="preferencias" id="3" >Productos
+                    <input type="checkbox" name="preferencias" id="4" >Otros
+                    <br><br>
+                    <textarea placeholder="COMENTARIOS" required class="relleno" name="comment" id="comment" cols="30" rows="2"></textarea>
+                    
+                    
+                    <br><br>
+                    <input class="boton2" type="submit" value="Enviar">
+                    <input class="boton2" type="reset" value="Borrar">    
+            
+                </form>
+            </div>
+            
+            </div>
+        <div id="mensajito" class="col-3">
+            <h5>No nos mandes spam o te devolvemos tu dinero</h5>
+            <br><br><br>
+            <h5>O mandanos un mail directamente a <a target="_blank" href="mailto:jardineriahastapor@loscodos.edu.ar">jardineriahastapor@loscodos.edu.ar</a></h5> 
+            
+
+        </div>
+             
+        </div>
+         <br><br><br>
+    </main>
+    <div class="col-12 col-s-12"></div>
+    <div class="footer col-12 col-s-12" id="footer"></div>
+
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/form.js"></script>
+</body>
+
+</html>

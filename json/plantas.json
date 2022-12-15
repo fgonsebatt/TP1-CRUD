@@ -1,0 +1,61 @@
+{
+        "productos": [
+            {
+                "codigo": 1,
+                "nombre": "Dimorphoteca",
+                "imagen": "json/imagenes/Plantadeexterior. Dimorphoteca.jpg",
+                "precio": 400,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 2,
+                "nombre": "Aphelandra squarrosa",
+                "imagen": "json/imagenes/Plantadeinterior APHELANDRA SQUARROSA.jpg",
+                "precio": 500,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 3,
+                "nombre": "Clotonpreta",
+                "imagen": "json/imagenes/Plantadeinterior.clotonpreta.jpg",
+                "precio": 600,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 4,
+                "nombre": "Cretona",
+                "imagen": "json/imagenes/Plantadeinterior.cretona.jpg",
+                "precio": 1200,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 5,
+                "nombre": "Estrella Federal",
+                "imagen": "json/imagenes/Plantadeinterior.estrellafederal.jpg",
+                "precio": 2500,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 6,
+                "nombre": "Monstera deliciosa",
+                "imagen": "json/imagenes/Plantadeinterior.Monsteradeliciosa.jpg",
+                "precio": 600,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 7,
+                "nombre": "Rhoeodiscolor",
+                "imagen": "json/imagenes/Plantadeinterior.Rhoeodiscolor.jpg",
+                "precio": 600,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            },
+            {
+                "codigo": 8,
+                "nombre": "Aspidrista",
+                "imagen": "json/imagenes/Plantainterior.aspidrista.jpg",
+                "precio": 200,
+                "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            }
+
+        ]
+}
