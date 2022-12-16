@@ -1,8 +1,7 @@
-document.getElementById("txtUser").value = decodeURIComponent(parts[1][1])
-document.getElementById("txtPassw").value = decodeURIComponent(parts[2][1])
 
-let n = document.getElementById("txtUser").value
-let p = document.getElementById("txtPassw").value
+
+let n = document.getElementById("txtUser");
+let p = document.getElementById("txtPassw");
 
 if (document.getElementById("app")) {
     const { createApp } = Vue
