@@ -20,7 +20,7 @@ function guardar() {
         .then(function () {
             console.log("creado")
             alert("Grabado")
-            window.location.href = "../frontend/users.html";  //NUEVO  
+            window.location.href = "../users.html";  //NUEVO  
             // Handle response we get from the API
         })
         .catch(err => {
