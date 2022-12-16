@@ -41,10 +41,10 @@ if (document.getElementById("app")) {
                 fetch(this.url + '/')
                     .then(res => res.json())
                     .then(data => {
-                        for (var i = 1; i<=10; i++) {
-                            console.log(i);
+                        for (usuario of datos) {
+                            
 
-                            if (data.user == n && data.passw == p) {
+                            if (usuario.user == n && usuario.passw == p) {
                                 window.location.href = "./users.html";
 
                             } else {
