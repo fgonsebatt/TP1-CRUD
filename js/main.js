@@ -44,7 +44,7 @@ if (document.getElementById("app")) {
                 fetch(this.url + '/')
                     .then(res => res.json())
                     .then(data => {
-                        for (var i = 1; usuario in usuarios; i++) {
+                        for (var i = 1; i<=10; i++) {
                             console.log(i);
 
                             if (data.user == n && data.passw == p) {
