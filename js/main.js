@@ -1,7 +1,5 @@
-
-
-let n = document.getElementById("txtUser");
-let p = document.getElementById("txtPassw");
+let n = document.getElementById("txtuser");
+let p = document.getElementById("txtpassw");
 
 if (document.getElementById("app")) {
     const { createApp } = Vue
