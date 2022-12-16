@@ -1,6 +1,12 @@
+document.getElementById("txtUser").value = decodeURIComponent(parts[1][1])
+document.getElementById("txtPassw").value = decodeURIComponent(parts[2][1])
+
+let n = document.getElementById("txtUser").value
+let p = document.getElementById("txtPassw").value
+
 if (document.getElementById("app")) {
     const { createApp } = Vue
- 
+
     createApp({
         data() {
             return {
@@ -9,7 +15,7 @@ if (document.getElementById("app")) {
                 loading: true,
                 url: "https://felipegonsebatt.pythonanywhere.com/usuarios",
                 logueado: sessionStorage.getItem('logueado')
-                }
+            }
         },
         methods: {
             fetchData(url) {
@@ -35,16 +41,20 @@ if (document.getElementById("app")) {
                     })
             },
             inicioSesion() {
-                fetch(this.url + '/' + this.Usuario.user)
+                fetch(this.url + '/')
                     .then(res => res.json())
                     .then(data => {
-                        if (data.user == this.Usuario.user && data.passw == this.Usuario.passw) {
-                            this.logueado = data.user
-                            sessionStorage.setItem('logueado', data.user)
-                            this.limpiarCampos()                      
-                        } else {
-                            alert("Usuario o contraseña incorrecto.")
+                        for (var i = 1; usuario in usuarios; i++) {
+                            console.log(i);
+
+                            if (data.user == n && data.passw == p) {
+                                window.location.href = "./users.html";
+
+                            } else {
+                                alert("Usuario o contraseña incorrecto.")
+                            }
                         }
+                        
                     })
             },
             cerrarSesion() {

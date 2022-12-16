@@ -11,7 +11,7 @@ document.getElementById("txtId").value = decodeURIComponent(parts[0][1])
 document.getElementById("txtUser").value = decodeURIComponent(parts[1][1])
 document.getElementById("txtPassw").value = decodeURIComponent(parts[2][1])
 document.getElementById("txtEmail").value =decodeURIComponent( parts[3][1])
-function modificar() {x
+function modificar() {
     let id = document.getElementById("txtId").value
     let n = document.getElementById("txtUser").value
     let p = document.getElementById("txtPassw").value

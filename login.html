@@ -25,21 +25,24 @@
                     <h3>LOGIN</h3>
                 </div>
                 <div class="col-6">
-                    <form action="users.html" id="logn">
+                    <form action="" id="logn">
 
-                        <input placeholder="USER" required class="relleno2" v-model="Usuario.user" type="text" name="user" id="user">
+                        <input placeholder="USER" required class="relleno2" type="text" name="user" id="user">
               
                         <br><br>
-                        <input placeholder="PASSWORD" required class="relleno2" v-model="Usuario.passw" type="password" name="password" id="password">
+                        <input placeholder="PASSWORD" required class="relleno2" type="password" name="password" id="passw">
      
                         <br><br>
 
                         <br><br>
-                        <div v-if="logueado == null">
+
+
+                        <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
+                        <!-- <div v-if="logueado == null">
                             <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
                         </div>
-                        <!-- <div v-else>
-                            <input type="submit" value="Iniciar" class="boton2 submit">
+                        <div v-else>
+                            <input type="submit" value="Entrar" class="boton2 submit">
                         </div> -->
                         
                         <!-- <a v-if="logueado != null" href="users.html"></a> -->
@@ -64,7 +67,7 @@
     <div class="footer col-12 col-s-12" id="footer"></div>
 
     <script src="./javascript/main.js"></script>
-    <script src="./js/logn.js"></script>
+    <!-- <script src="./js/logn.js"></script> -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script src="./js/main.js"></script>
