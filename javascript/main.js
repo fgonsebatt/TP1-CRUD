@@ -82,33 +82,3 @@ function ocultar() {
 function mostrar() {
     document.getElementById('obj3').style.display = 'block';
 }
-
-let url = "./json/plantas.json"
-let datos = [];
-fetch(url)
-    .then(response => response.json())
-    .then(data => {  
-        console.log(data)
-        datos = data.productos
-        console.log(datos)  
-        let cad = `<div id="app" class="flex-container col-11 col-m-11 col-s-12 ">`
-
-        for (producto of datos) {
-            cad += `
-            <div class="tarjeta zoom" v-for="producto in productos">
-            <img class="card-img-top" : src="${producto.imagen}" alt="${producto.nombre}" style="width:100%">
-            <div class="card-body">
-                <h4 class="card-title">${producto.nombre}</h4>
-                <p class="card-text">Precio &#36;${producto.precio}</p>
-                <p class="card-text"  id="textitext">${producto.descripcion}</p>
-                <!--  <a href="#" class="btn btn-primary">Ver Producto</a>-->
-            </div>
-        </div>   
-    `
-        }
-        cad += `</div>
-        `
-        console.log(cad)
-        document.getElementById("itemstienda").innerHTML = cad;
-    }
-    );

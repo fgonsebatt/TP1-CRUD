@@ -14,7 +14,7 @@
 <body>
     <header id="header"></header>
     <main>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
         <div class="paginas">
             <br>
             <div id="barrapad" class="col-1"></div>
@@ -24,11 +24,23 @@
                     <h3>TIENDA</h3>
                 </div>
                 <br>
-                
-                <div id="itemstienda"></div>
-                
+                <div id="app">
+                    <div class="flex-container col-11 col-m-11 col-s-12 ">
+                    <div class="tarjeta zoom" v-for="producto in productos">
+                        <img class="card-img-top" :src="producto.imagen" alt="producto.nombre"
+                            style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">{{producto.nombre}}</h4>
+                            <p class="card-text">Precio &#36;{{producto.precio}}</p>
+                            <p class="card-text">Stock &#36;{{producto.stock}}</p>
+                            <p class="card-text" id="textitext">{{producto.descripcion}}</p>
+                            <!--  <a href="#" class="btn btn-primary">Ver Producto</a>-->
+                        </div>
+                    </div>
+                </div>
+                </div>
                 <br><br>
-                
+
             </div>
             <div id="barrapad" class="col-1"></div>
         </div>
@@ -36,8 +48,11 @@
     </main>
     <div class="col-12 col-s-12"></div>
     <div class="footer col-12 col-s-12" id="footer"></div>
-    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./javascript/main.js"></script>
+    <script src="./js/main.js"></script>
+
+
 </body>
 
 </html>

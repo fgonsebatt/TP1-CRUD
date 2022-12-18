@@ -1,7 +1,3 @@
-const n = document.getElementById("txtuser");
-const p = document.getElementById("txtpassw");
-console.log(n)
-console.log(p)
 if (document.getElementById("app")) {
     const { createApp } = Vue
 
@@ -12,7 +8,10 @@ if (document.getElementById("app")) {
                 errored: false,
                 loading: true,
                 url: "https://felipegonsebatt.pythonanywhere.com/usuarios",
-                logueado: sessionStorage.getItem('logueado')
+                productos: [],
+                errored2: false,
+                loading2: true,
+                url2: "https://felipegonsebatt.pythonanywhere.com/productos"
             }
         },
         methods: {
@@ -38,21 +37,45 @@ if (document.getElementById("app")) {
                         location.reload();
                     })
             },
+            fetchDataPr(url2) {
+                fetch(url2)
+                    .then(response => response.json())
+                    .then(data2 => {
+                        this.productos = data2;
+                        this.loading2 = false;
+                        
+                    })
+                    .catch(err => {
+                        this.errored2 = true
+                    })
+            },
+            eliminarPr(producto) {
+                const url2 = 'https://felipegonsebatt.pythonanywhere.com/productos/' + producto;
+                var options2 = {
+                    method: 'DELETE',
+                }
+                fetch(url2, options2)
+                    .then(res => res.text()) // or res.json()
+                    .then(res => {
+                        location.reload();
+                    })
+            },
             inicioSesion() {
                 fetch(this.url + '/')
-                    .then(res => res.json())
+                    .then(response => response.json())
                     .then(data => {
-                        for (usuario of data) {
+                        this.usuarios = data;
+                        var us = document.getElementById("txtuser");
+                        var pw = document.getElementById("txtpassw");
+                        for (usuario in usuarios) {
                             
-
-                            if (usuario.user == n && usuario.passw == p) {
+                            if (usuario.user == us && usuario.passw == pw) {
                                 window.location.href = "./users.html";
 
                             } else {
                                 alert("Usuario o contraseña incorrecto.")
                             }
-                        }
-                        
+                        }                        
                     })
             },
             cerrarSesion() {
@@ -67,6 +90,7 @@ if (document.getElementById("app")) {
         },
         created() {
             this.fetchData(this.url)
+            this.fetchDataPr(this.url2)
         }
     }).mount('#app')
 }

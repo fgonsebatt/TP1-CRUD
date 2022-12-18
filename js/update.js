@@ -7,19 +7,21 @@ for (let i = 0; i < args.length; ++i) {
     parts[i] = args[i].split('=');
 }
 //decodeUriComponent elimina los caracteres especiales que recibe en la URL 
+
 document.getElementById("txtId").value = decodeURIComponent(parts[0][1])
 document.getElementById("txtUser").value = decodeURIComponent(parts[1][1])
 document.getElementById("txtPassw").value = decodeURIComponent(parts[2][1])
-document.getElementById("txtEmail").value =decodeURIComponent( parts[3][1])
+document.getElementById("txtEmail").value = decodeURIComponent( parts[3][1])
+
 function modificar() {
     let id = document.getElementById("txtId").value
-    let n = document.getElementById("txtUser").value
-    let p = document.getElementById("txtPassw").value
-    let e = document.getElementById("txtEmail").value
+    let us = document.getElementById("txtUser").value
+    let pas = document.getElementById("txtPassw").value
+    let em = document.getElementById("txtEmail").value
     let usuario = {
-        user: n,
-        passw: p,
-        email: e
+        user: us,
+        passw: pas,
+        email: em
     }
     let url = "https://felipegonsebatt.pythonanywhere.com/usuarios/"+id
     var options = {
