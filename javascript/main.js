@@ -20,7 +20,7 @@ document.getElementById("header").innerHTML = `
                     <div class="col-2 col-s-5 boton"><a href="sobrenosotros.html">Sobre Nosotros</a></div>
                 </div>
                 <div>
-                    <a href="login.html">Login</a>
+                    <a href="users.html">Login</a>
 
                 </div>
             </div>
@@ -42,7 +42,7 @@ document.getElementById("header").innerHTML = `
                     <h1 id="jar2">Jardineria</h1>
                 </div>
                 <div>
-                    <a href="login.html">Login</a>
+                    <a href="users.html">Login</a>
 
                 </div>
                 <div class="head-s col-s-12"></div>

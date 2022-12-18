@@ -24,20 +24,20 @@
                 <div class="col-6">
                     <h3>LOGIN</h3>
                 </div>
-                <div class="col-6">
+                <div id="app" class="col-6">
                     <form action="" id="logn">
 
-                        <input placeholder="USER" required class="relleno2" type="text" name="user" id="txtuser">
+                        <input placeholder="USER" required class="relleno2" type="text" name="txtUser" id="txtUser">
               
                         <br><br>
-                        <input placeholder="PASSWORD" required class="relleno2" type="password" name="password" id="txtpassw">
+                        <input placeholder="PASSWORD" required class="relleno2" type="password" name="txtPassw" id="txtPassw">
      
                         <br><br>
 
                         <br><br>
 
 
-                        <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
+                        <input onclick="login()" type="submit" value="Iniciar" class="boton2 submit">
                         <!-- <div v-if="logueado == null">
                             <input @click="inicioSesion()" type="submit" value="Iniciar" class="boton2 submit">
                         </div>

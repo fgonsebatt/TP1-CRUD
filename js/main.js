@@ -11,9 +11,15 @@ if (document.getElementById("app")) {
                 productos: [],
                 errored2: false,
                 loading2: true,
-                url2: "https://felipegonsebatt.pythonanywhere.com/productos"
+                url2: "https://felipegonsebatt.pythonanywhere.com/productos",
+                u: document.getElementById("txtUser"),
+                pas: document.getElementById("txtPassw")
+    
+                
             }
+
         },
+        
         methods: {
             fetchData(url) {
                 fetch(url)
@@ -24,6 +30,23 @@ if (document.getElementById("app")) {
                     })
                     .catch(err => {
                         this.errored = true
+                    })
+            },
+            inicioSesion() {
+                fetch(url)
+                    .then(res => res.json())
+                    .then(data => {
+                        this.usuarios = data;
+                        alert(u)
+                        for (usuario in usuarios) {
+                
+                            if (usuario.user == u && usuario.passw == pas) {
+                                window.location.href = "users.html";
+                
+                            } else {
+                                alert("Usuario o contraseña incorrecto.")
+                            }
+                        }   
                     })
             },
             eliminar(usuario) {
@@ -60,24 +83,7 @@ if (document.getElementById("app")) {
                         location.reload();
                     })
             },
-            inicioSesion() {
-                fetch(this.url + '/')
-                    .then(response => response.json())
-                    .then(data => {
-                        this.usuarios = data;
-                        var us = document.getElementById("txtuser");
-                        var pw = document.getElementById("txtpassw");
-                        for (usuario in usuarios) {
-                            
-                            if (usuario.user == us && usuario.passw == pw) {
-                                window.location.href = "./users.html";
-
-                            } else {
-                                alert("Usuario o contraseña incorrecto.")
-                            }
-                        }                        
-                    })
-            },
+            
             cerrarSesion() {
                 sessionStorage.removeItem('logueado')
                 this.logueado = sessionStorage.getItem('logueado')
