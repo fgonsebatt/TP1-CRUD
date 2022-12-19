@@ -5,7 +5,7 @@ function guardar() {
     let e = document.getElementById("txtEmail").value
  
     let usuario = {
-        user: u,
+        username: u,
         passw: pas,
         email: e
     }
