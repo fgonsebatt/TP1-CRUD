@@ -60,7 +60,7 @@
                             <td>{{producto.descripcion}}</td>
                             <td>
                                 <a :href="'update-pr.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&precio='+producto.precio+'&stock='+producto.stock+'&imagen='+producto.imagen+'&descripcion='+producto.descripcion" class="btn btn-primary">Modificar</a>
-                                <button v-on:click="eliminarPr(producto.idp)" class="btn btn-danger">Eliminar</button>
+                                <button v-on:click="eliminarPr(producto.id)" class="btn btn-danger">Eliminar</button>
                             </td>
                         </tr>
                     </table>
