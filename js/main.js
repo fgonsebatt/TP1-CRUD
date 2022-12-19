@@ -14,12 +14,12 @@ if (document.getElementById("app")) {
                 url2: "https://felipegonsebatt.pythonanywhere.com/productos",
                 // u: document.getElementById("txtUser"),
                 // pas: document.getElementById("txtPassw")
-    
-                
+
+
             }
 
         },
-        
+
         methods: {
             fetchData(url) {
                 fetch(url)
@@ -39,16 +39,27 @@ if (document.getElementById("app")) {
             //             this.usuarios = data;
             //             alert(u)
             //             for (usuario in usuarios) {
-                
+
             //                 if (usuario.user == u && usuario.passw == pas) {
             //                     window.location.href = "users.html";
-                
+
             //                 } else {
             //                     alert("Usuario o contraseña incorrecto.")
             //                 }
-            //             }   
+            //             }
             //         })
             // },
+            login() {
+                const url3 = 'https://felipegonsebatt.pythonanywhere.com/usuarios/login';
+                var options = {
+                    method: 'POST',
+                }
+                fetch(url3, options)
+                    .then(res => res.text()) // or res.json()
+                    .then(res => {
+                        window.location.href = "users.html";
+                    })
+            },
             eliminar(usuario) {
                 const url = 'https://felipegonsebatt.pythonanywhere.com/usuarios/' + usuario;
                 var options = {
@@ -66,7 +77,7 @@ if (document.getElementById("app")) {
                     .then(data2 => {
                         this.productos = data2;
                         this.loading2 = false;
-                        
+
                     })
                     .catch(err => {
                         this.errored2 = true
@@ -83,7 +94,7 @@ if (document.getElementById("app")) {
                         location.reload();
                     })
             }
-            
+
             // cerrarSesion() {
             //     sessionStorage.removeItem('logueado')
             //     this.logueado = sessionStorage.getItem('logueado')
