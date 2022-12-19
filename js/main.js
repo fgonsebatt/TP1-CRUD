@@ -57,7 +57,7 @@ if (document.getElementById("app")) {
                 fetch(url3, options)
                     .then(res => res.text()) // or res.json()
                     .then(res => {
-                        window.location.href = "users.html";
+                       
                     })
             },
             eliminar(usuario) {
