@@ -45,9 +45,9 @@
 // }
 
 const form = {
-    user: document.getElementById("txtUser"),
-    password: document.getElementById("txtPassw"),
-    submit: document.querySelector("#signin-btn-submit"),
+    us: document.getElementById("txtUser"),
+    pass: document.getElementById("txtPassw"),
+    submit: document.querySelector("#signin-submit"),
 
   };
   let button = form.submit.addEventListener("click", (e) => {
@@ -61,8 +61,8 @@ const form = {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user: form.user.value,
-        password: form.password.value,
+        us: form.user.value,
+        pass: form.password.value,
       }),
     })
       .then((response) => response.json())
@@ -73,7 +73,7 @@ const form = {
           alert("Error Password or Username"); /*displays error message*/
         } else {
           window.open(
-            "target.html"
+            "users.html"
           ); /*opens the target page while Id & password matches*/
         }
       })

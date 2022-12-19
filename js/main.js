@@ -12,8 +12,8 @@ if (document.getElementById("app")) {
                 errored2: false,
                 loading2: true,
                 url2: "https://felipegonsebatt.pythonanywhere.com/productos",
-                u: document.getElementById("txtUser"),
-                pas: document.getElementById("txtPassw")
+                // u: document.getElementById("txtUser"),
+                // pas: document.getElementById("txtPassw")
     
                 
             }
@@ -32,23 +32,23 @@ if (document.getElementById("app")) {
                         this.errored = true
                     })
             },
-            inicioSesion() {
-                fetch(url)
-                    .then(res => res.json())
-                    .then(data => {
-                        this.usuarios = data;
-                        alert(u)
-                        for (usuario in usuarios) {
+            // inicioSesion() {
+            //     fetch(url)
+            //         .then(res => res.json())
+            //         .then(data => {
+            //             this.usuarios = data;
+            //             alert(u)
+            //             for (usuario in usuarios) {
                 
-                            if (usuario.user == u && usuario.passw == pas) {
-                                window.location.href = "users.html";
+            //                 if (usuario.user == u && usuario.passw == pas) {
+            //                     window.location.href = "users.html";
                 
-                            } else {
-                                alert("Usuario o contraseña incorrecto.")
-                            }
-                        }   
-                    })
-            },
+            //                 } else {
+            //                     alert("Usuario o contraseña incorrecto.")
+            //                 }
+            //             }   
+            //         })
+            // },
             eliminar(usuario) {
                 const url = 'https://felipegonsebatt.pythonanywhere.com/usuarios/' + usuario;
                 var options = {
@@ -82,17 +82,17 @@ if (document.getElementById("app")) {
                     .then(res => {
                         location.reload();
                     })
-            },
-            
-            cerrarSesion() {
-                sessionStorage.removeItem('logueado')
-                this.logueado = sessionStorage.getItem('logueado')
-                this.limpiarCampos()
-            },
-            limpiarCampos() {
-                this.Usuario.user = ""
-                this.Usuario.password = ""
             }
+            
+            // cerrarSesion() {
+            //     sessionStorage.removeItem('logueado')
+            //     this.logueado = sessionStorage.getItem('logueado')
+            //     this.limpiarCampos()
+            // },
+            // limpiarCampos() {
+            //     this.Usuario.user = ""
+            //     this.Usuario.password = ""
+            // }
         },
         created() {
             this.fetchData(this.url)

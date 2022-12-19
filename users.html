@@ -88,11 +88,11 @@
                         </tr>
                         <tr v-for="usuario in usuarios">
                             <td>{{usuario.id}}</td>
-                            <td>{{usuario.user}}</td>
+                            <td>{{usuario.username}}</td>
                             <td>{{usuario.passw}}</td>
                             <td>{{usuario.email}}</td>
                             <td>
-                                <a :href="'update.html?id='+usuario.id+'&user='+usuario.user+'&passw='+usuario.passw+'&email='+usuario.email" class="btn btn-primary">Modificar</a>
+                                <a :href="'update.html?id='+usuario.id+'&username='+usuario.username+'&passw='+usuario.passw+'&email='+usuario.email" class="btn btn-primary">Modificar</a>
                                 <button v-on:click="eliminar(usuario.id)" class="btn btn-danger">Eliminar</button>
                             </td>
                         </tr>
