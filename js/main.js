@@ -49,17 +49,17 @@ if (document.getElementById("app")) {
             //             }
             //         })
             // },
-            login() {
-                const url3 = 'https://felipegonsebatt.pythonanywhere.com/usuarios/login';
-                var options = {
-                    method: 'POST',
-                }
-                fetch(url3, options)
-                    .then(res => res.text()) // or res.json()
-                    .then(res => {
+            // login() {
+            //     const url3 = 'https://felipegonsebatt.pythonanywhere.com/usuarios/login';
+            //     var options = {
+            //         method: 'POST',
+            //     }
+            //     fetch(url3, options)
+            //         .then(res => res.text()) // or res.json()
+            //         .then(res => {
                        
-                    })
-            },
+            //         })
+            // },
             eliminar(usuario) {
                 const url = 'https://felipegonsebatt.pythonanywhere.com/usuarios/' + usuario;
                 var options = {
